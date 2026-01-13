@@ -3,7 +3,7 @@ import { Link } from "react-router";
 const links = [
   { to: "/about", label: "About" },
   { to: "/projects", label: "Projects" },
-  { to: "/contact", label: "Contacts" },
+  { to: "/contacts", label: "Contacts" },
 ];
 
 export default function Header() {
