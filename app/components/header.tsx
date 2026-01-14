@@ -8,7 +8,7 @@ const links = [
 
 export default function Header() {
   return (
-    <header className='w-full py-2 transition-all duration-1000 fixed top-0 z-9999 px-4 md:px-8 xl:px-12 2xl:px-28'>
+    <header className='w-full py-2 transition-all duration-1000 fixed top-0 z-9999 px-4 md:px-8 xl:px-12 2xl:px-28 bg-dark'>
       <div className='flex w-full justify-between items-center max-w-360 mx-auto '>
         <Link to='/' className='flex flex-col text-xl w-1/3'>
           <span>Yorgi</span>

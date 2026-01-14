@@ -1,50 +1,62 @@
-import { cva, type VariantProps } from "class-variance-authority";
-import { ArrowRight } from "lucide-react";
-import { Link } from "react-router";
+import { cva, type VariantProps } from 'class-variance-authority';
+import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router';
 
-const textVariants = cva("", {
+const textVariants = cva('', {
   variants: {
     size: {
-      default: "px-36 py-4 text-2xl",
-      md: "px-16 py-3.5 text-xl",
-      sm: "px-16 py-2 text-lg",
+      default: 'px-18 py-2.5 text-2xl',
+      md: 'px-12 py-2.5 text-xl',
+      sm: 'px-12 py-2 text-lg',
     },
   },
   defaultVariants: {
-    size: "default",
+    size: 'default',
   },
 });
 
-const iconVariants = cva("", {
+const iconVariants = cva('', {
   variants: {
     iconSize: {
-      default: "p-4",
-      md: "p-3",
-      sm: "p-2",
+      default: 'p-3.5',
+      md: 'p-2',
+      sm: 'p-1',
     },
   },
   defaultVariants: {
-    iconSize: "default",
+    iconSize: 'default',
   },
 });
 
 interface ButtonProps
-  extends VariantProps<typeof textVariants>,
-    VariantProps<typeof iconVariants> {
+  extends VariantProps<typeof textVariants>, VariantProps<typeof iconVariants> {
   href: string;
   children: React.ReactNode;
 }
 
-export default function Button({ href, children, size, iconSize }: ButtonProps) {
+export default function Button({
+  href,
+  children,
+  size,
+  iconSize,
+}: ButtonProps) {
   const textClass = textVariants({ size });
   const iconClass = iconVariants({ iconSize });
   return (
-    <Link to={href} className="flex flex-row items-end gap-3 justify-end">
-      <span className={`bg-light text-dark text-nowrap rounded-full italic ${textClass}`}>
+    <Link to={href} className='flex flex-row items-end gap-3 justify-end group'>
+      <span
+        className={`bg-light text-dark text-nowrap rounded-full italic ${textClass}`}
+      >
         {children}
       </span>
-      <span className={`bg-light rounded-full text-dark ${iconClass}`}>
-        <ArrowRight size={32} strokeWidth={1.5} />
+      <span
+        className={`bg-light rounded-full text-dark ${iconClass} `}
+      >
+        <ArrowRight
+          size={24}
+          strokeWidth={1.5}
+          className='group-hover:-rotate-45 transition-all duration-300'
+        />
       </span>
     </Link>
   );
