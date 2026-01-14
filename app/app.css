@@ -13,4 +13,7 @@ body {
   --font-sans: "Open Sans", sans-serif;
   --font-mono: "Fira Code", monospace;
   --color-dark: #121212;
+  --color-gray-dark: #3D3D3D;
+  --color-light: #F5F5F5;
+  --color-gray-light: #A6A6A6;
 }
