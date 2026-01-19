@@ -3,7 +3,7 @@ import type { Route } from './+types/_index';
 
 import { Textfit } from 'react-textfit';
 import ButtonSocial from '~/components/ButtonSocial';
-import { ArrowUpRight, Github, Linkedin, Section } from 'lucide-react';
+import { ArrowUpRight, Github, Linkedin } from 'lucide-react';
 
 export function meta({}: Route.MetaArgs) {
   return [
