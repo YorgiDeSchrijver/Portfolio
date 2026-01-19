@@ -1,12 +1,10 @@
 import { Link } from 'react-router';
 
-const links = [
-  { to: '/about', label: 'About' },
-  { to: '/projects', label: 'Projects' },
-  { to: '/contacts', label: 'Contacts' },
-];
-
-export default function Header() {
+export default function Header({
+  links,
+}: {
+  links: { to: string; label: string }[];
+}) {
   return (
     <header className='w-full py-2 transition-all duration-1000 fixed top-0 z-9999 px-4 md:px-8 xl:px-12 2xl:px-28 bg-dark'>
       <div className='flex w-full justify-between items-center max-w-360 mx-auto '>
