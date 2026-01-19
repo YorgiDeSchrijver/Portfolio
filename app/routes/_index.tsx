@@ -7,8 +7,28 @@ import { ArrowUpRight, Github, Linkedin, Section } from 'lucide-react';
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: 'New React Router App' },
-    { name: 'description', content: 'Welcome to React Router!' },
+    { title: 'Yorgi De Schrijver - Full-Stack Developer | Portfolio' },
+    {
+      name: 'description',
+      content:
+        'Full-stack developer specializing in React, TypeScript, AWS, and cloud technologies. View my projects and experience in web development.',
+    },
+    {
+      name: 'keywords',
+      content:
+        'Full-stack developer, React, TypeScript, AWS, Node.js, Web Development, Cloud Technologies, Portfolio',
+    },
+    {
+      property: 'og:title',
+      content: 'Yorgi De Schrijver - Full-Stack Developer',
+    },
+    {
+      property: 'og:description',
+      content:
+        'Full-stack developer specializing in React, TypeScript, AWS, and cloud technologies.',
+    },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://yorgideschrijver.be' },
   ];
 }
 
@@ -108,8 +128,8 @@ export default function Index() {
                   Front-end
                 </h1>
                 <p className='text-dark text-xl font-mono leading-10 mb-0'>
-                  TypeScript / React / NextJs / Remix / React Native / Jest /
-                  GraphQL / Prettier
+                  TypeScript / React / Next.js / Remix / React Native / Jest /
+                  GraphQL
                 </p>
               </div>
               <div className='row-start-2 row-span-1 bg-dark p-8 rounded-[2.5rem] border border-gray-dark'>
@@ -117,7 +137,7 @@ export default function Index() {
                   Styles
                 </h1>
                 <p className='text-light text-xl font-mono leading-10 mb-0 line-clamp-2'>
-                  Tailwind CSS / SCSS / Material UI / PostCSS / CSS-in-JS
+                  Tailwind CSS / SCSS / Material UI / PostCSS
                 </p>
               </div>
               <div className='row-start-2 row-span-1 flex justify-center items-center'>
@@ -142,17 +162,17 @@ export default function Index() {
                   Back-end
                 </h1>
                 <p className='text-light text-xl font-mono leading-10 mb-0'>
-                  Node.Js / Spring Boot / ASP.NET / Prisma / MongoDB /
+                  Node.js / Express / Spring Boot / ASP.NET / Prisma / MongoDB /
                   PostgreSQL / MySQL
                 </p>
               </div>
               <div className='row-start-4 row-span-1'></div>
               <div className='row-start-4 row-span-1 bg-dark p-8 rounded-[2.5rem] border border-gray-dark z-10'>
                 <h1 className='text-gray-light text-3xl mb-5 font-medium'>
-                  DevOps
+                  Cloud & DevOps
                 </h1>
                 <p className='text-light text-xl font-mono leading-10 mb-0'>
-                  TypeScript / React / NextJs / Remix / React Native /{' '}
+                  AWS / Docker / Git / GitHub Actions
                 </p>
               </div>
             </div>
@@ -182,12 +202,8 @@ export default function Index() {
                 className='grid grid-cols-6 gap-4 border-t border-gray-dark w-full px-4 py-4 z-10'
               >
                 <div className='pr-4 border-gray-dark col-span-1'>
-                  <p className='text-xl text-light'>
-                    {work.period}
-                  </p>
-                  <p className='text-sm text-gray-light'>
-                    {work.duration}
-                  </p>
+                  <p className='text-xl text-light'>{work.period}</p>
+                  <p className='text-sm text-gray-light'>{work.duration}</p>
                 </div>
                 <p className='text-2xl text-light leading-[200%] col-span-2'>
                   {work.company}
