@@ -1,0 +1,39 @@
+import { Link, NavLink } from 'react-router';
+
+export default function Header({
+  links,
+}: {
+  links: { to: string; label: string }[];
+}) {
+  return (
+    <header className='w-full py-2 transition-all duration-1000 fixed top-0 z-9999 px-4 md:px-8 xl:px-12 2xl:px-28 bg-dark'>
+      <div className='flex w-full justify-between items-center max-w-360 mx-auto '>
+        <NavLink to='/' className='flex flex-col text-xl w-1/3'>
+          <span>Yorgi</span>
+          <span>De Schrijver</span>
+        </NavLink>
+        <nav className='flex space-x-16 items-center justify-center text-light font-medium w-1/3'>
+          {links.map((link) => (
+            <NavLink key={link.to} to={link.to}>
+              {({ isActive }) => (
+                <span
+                  className={isActive ? 'underline underline-offset-8' : 'hover:underline underline-offset-8'}
+                >
+                  {link.label}
+                </span>
+              )}
+            </NavLink>
+          ))}
+        </nav>
+        <div className='flex flex-col items-end text-lg w-1/3'>
+          <button className='hover:underline underline cursor-pointer'>
+            EN
+          </button>
+          <button className='hover:underline text-gray-light active:underline cursor-pointer'>
+            NL
+          </button>
+        </div>
+      </div>
+    </header>
+  );
+}
